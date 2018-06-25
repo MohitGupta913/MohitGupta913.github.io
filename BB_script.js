@@ -193,6 +193,16 @@ if(!botCheck1()) {
 
 if (isBot) {
     console.log("You are bot! Go away!");
+    if (window.XMLHttpRequest) {
+        // code for modern browsers
+        xhttp = new XMLHttpRequest();
+     } else {
+        // code for old IE browsers
+        xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    
+    xhttp.open("GET", "http://localhost:3000", true);
+    xhttp.send();
 
 } else {
     console.log("You are NOT a BOT! Welcome!");
